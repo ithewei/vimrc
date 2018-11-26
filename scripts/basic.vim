@@ -36,8 +36,9 @@ set tabstop=4
 
 set textwidth=80
 set nowrap
-set whichwrap=b,s,<,> 
+set whichwrap=b,s,<,>
 
+set list  " show space chars
 set listchars=tab:>-,trail:~
 
 """""""""""""""""""""""""""""""""""""""""""""""""

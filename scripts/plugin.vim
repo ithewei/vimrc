@@ -37,6 +37,8 @@ let NERDTreeIgnore=['\.o','.pyc']
 let NERDTreeWinPos='left'
 let NERDTreeWinSize=32
 
+Plugin 'The-NERD-Commenter'
+
 Plugin 'minibufexpl.vim'
 
 Plugin 'SuperTab'
