@@ -30,30 +30,41 @@ Plugin 'VundleVim/Vundle.vim'
 " 'name': 'newL9'}
 "
 " All of your Plugins must be added before the following line
-Plugin 'Auto-Pairs'
 
-Plugin 'The-NERD-tree'
-let NERDTreeIgnore=['\.o','.pyc']
+Plugin 'scrooloose/nerdtree'
+let NERDTreeIgnore=['\.o$','\.pyc$']
 let NERDTreeWinPos='left'
-let NERDTreeWinSize=32
-
-Plugin 'The-NERD-Commenter'
-
-Plugin 'minibufexpl.vim'
-
-Plugin 'SuperTab'
-
-Plugin 'Syntastic'
 
 Plugin 'taglist.vim'
 set tags=tags;
 set autochdir
 let Tlist_Show_One_File=1
 let Tlist_Use_Right_Window=1
-let Tlist_WinWidth=32
+let Tlist_WinWidth=30
 let Tlist_Exit_OnlyWindow=1
 
+Plugin 'jlanzarotta/bufexplorer'
+
+Plugin 'winmanager'
+let g:winManagerWidth=30
+let g:winManagerWindowLayout="FileExplorer|BufExplorer"
+
+Plugin 'Auto-Pairs'
+Plugin 'scrooloose/nerdcommenter'
+
+"Plugin 'minibufexpl.vim'
+
 Plugin 'cscope.vim'
+
+"Plugin 'Syntastic'
+"Plugin 'OmniCppComplete'
+"Plugin 'SuperTab'
+
+Plugin 'Valloric/YouCompleteMe'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_key_invoke_completion='<C-c>'
+let g:ycm_collect_identifiers_from_tags_file=1
+set completeopt-=preview
 
 Plugin 'Markdown'
 
@@ -69,6 +80,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-map <C-w><C-e> <Esc>:NERDTreeFocus<CR>
-map <C-w><C-t> <Esc>:TlistOpen<CR>
+map <C-w><C-b> <Esc>:WMToggle<CR>
+map <C-w><C-e> <Esc>:NERDTreeToggle<CR>
+map <C-w><C-t> <Esc>:TlistToggle<CR>
 

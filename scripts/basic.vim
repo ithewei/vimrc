@@ -41,6 +41,20 @@ set whichwrap=b,s,<,>
 set list  " show space chars
 set listchars=tab:>-,trail:~
 
+if has("unix")
+    set path=.
+    set path+=/usr/include/c++/4.8
+    set path+=/usr/include/x86_64-linux-gnu/c++/4.8
+    set path+=/usr/include/c++/4.8/backward
+    set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include
+    set path+=/usr/local/include
+    set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed
+    set path+=/usr/include/x86_64-linux-gnu
+    set path+=/usr/include
+elseif has("win32")
+    set path=.
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " GUI
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -122,12 +136,6 @@ map  <C-g> <Esc>:w<CR>
 imap <C-g> <Esc>:w<CR>
 cmap <C-g> <Esc>:w<CR>
 vmap <C-g> <Esc>:w<CR>
-
-" window navigate
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
 
 " tabs navigate
 map <C-t>l <Esc>:tabNext<CR>
