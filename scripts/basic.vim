@@ -11,16 +11,19 @@ syntax on
 filetype plugin indent on
 
 let $LANG='en'
-set encoding=utf8
-set ffs=unix,dos,mac
+set enc=utf-8
+set ffs=unix,dos
 
 set autoread  " auto read when file changed
 set nobackup  " no backup file
 set noswapfile  " no swap file
 set history=100  " history commands
-set nu  "number: show line number
-set ruler  " show cursor pos
-set showcmd  " show command
+
+set nu  " number
+set ru  " ruler
+set sm  " showmatch
+set sc  " showcmd
+set wildmenu  " wildmode
 set cmdheight=2
 
 set ic  " ignorecase
@@ -30,30 +33,17 @@ set hls  " hlsearch
 
 set ai  " autoindent
 set sta  " smarttab
-set et  "expandtab
+set et  " expandtab
 set shiftwidth=4
 set tabstop=4
 
-set textwidth=80
+set textwidth=120
 set nowrap
 set whichwrap=b,s,<,>
 
+set backspace=indent,eol,start
 set list  " show space chars
 set listchars=tab:>-,trail:~
-
-if has("unix")
-    set path=.
-    set path+=/usr/include/c++/4.8
-    set path+=/usr/include/x86_64-linux-gnu/c++/4.8
-    set path+=/usr/include/c++/4.8/backward
-    set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include
-    set path+=/usr/local/include
-    set path+=/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed
-    set path+=/usr/include/x86_64-linux-gnu
-    set path+=/usr/include
-elseif has("win32")
-    set path=.
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " GUI
@@ -63,20 +53,19 @@ set mouse-=a  " disable mouse
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme molokai
+" colorscheme default
 set background=dark
 
 set laststatus=2  " 0: noshow 1: >1show 2: always show
-set statusline=\ %F%r%m%h%w\ [%{&ff}]\ \[%{&enc}]\ %y\ (%l,%c)\ %LL
-hi StatusLine cterm=bold ctermbg=Cyan
-au InsertEnter * hi StatusLine cterm=bold ctermbg=Green
-au InsertLeave,WinEnter * hi StatusLine cterm=bold ctermbg=Cyan
-au WinLeave * hi StatusLine cterm=bold ctermbg=White
+"set statusline=\ %F%r%m%h%w\ [%{&ff}]\ \[%{&enc}]\ %y\ (%l,%c)\ %LL
+
+"hi StatusLine cterm=bold ctermbg=Cyan
+"au InsertEnter * hi StatusLine cterm=bold ctermbg=Green
+"au InsertLeave,WinEnter * hi StatusLine cterm=bold ctermbg=Cyan
+"au WinLeave * hi StatusLine cterm=bold ctermbg=White
 
 set cursorline
 hi CursorLine cterm=none ctermbg=DarkGray
-au WinLeave * set nocursorline
-au WinEnter * set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " commands
@@ -125,17 +114,17 @@ map <C-f> l
 map <C-a> 0
 map <C-e> $
 
-inoremap <C-n> <Esc>ja
-inoremap <C-p> <Esc>ka
+" inoremap <C-n> <Esc>ja
+" inoremap <C-p> <Esc>ka
 inoremap <C-b> <Esc>i
 inoremap <C-f> <Esc>la
 inoremap <C-a> <Esc>I
 inoremap <C-e> <Esc>A
 
-map  <C-g> <Esc>:w<CR>
-imap <C-g> <Esc>:w<CR>
-cmap <C-g> <Esc>:w<CR>
-vmap <C-g> <Esc>:w<CR>
+map  <C-g> <Esc>
+imap <C-g> <Esc>
+cmap <C-g> <Esc>
+vmap <C-g> <Esc>
 
 " tabs navigate
 map <C-t>l <Esc>:tabNext<CR>

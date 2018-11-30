@@ -31,16 +31,16 @@ Plugin 'VundleVim/Vundle.vim'
 "
 " All of your Plugins must be added before the following line
 
+Plugin 'vim-airline/vim-airline'
+
 Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.o$','\.pyc$']
-let NERDTreeWinPos='left'
+let NERDTreeWinPos='right'
 
 Plugin 'taglist.vim'
 set tags=tags;
 set autochdir
 let Tlist_Show_One_File=1
-let Tlist_Use_Right_Window=1
-let Tlist_WinWidth=30
 let Tlist_Exit_OnlyWindow=1
 
 Plugin 'jlanzarotta/bufexplorer'
@@ -51,8 +51,6 @@ let g:winManagerWindowLayout="FileExplorer|BufExplorer"
 
 Plugin 'Auto-Pairs'
 Plugin 'scrooloose/nerdcommenter'
-
-"Plugin 'minibufexpl.vim'
 
 Plugin 'cscope.vim'
 
@@ -81,6 +79,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 map <C-w><C-b> <Esc>:WMToggle<CR>
-map <C-w><C-e> <Esc>:NERDTreeToggle<CR>
 map <C-w><C-t> <Esc>:TlistToggle<CR>
+map <C-w><C-e> <Esc>:NERDTreeToggle<CR>
+
+map <F2> <Esc>:TlistToggle<CR>
+map <F3> <Esc>:NERDTreeToggle<CR>
 
