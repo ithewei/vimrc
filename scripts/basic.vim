@@ -6,6 +6,7 @@
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible  " use vim settings, rather than vi
+set magic  " regix match
 
 syntax on
 filetype plugin indent on
@@ -14,9 +15,10 @@ let $LANG='en'
 set enc=utf-8
 set ffs=unix,dos
 
-set autoread  " auto read when file changed
-set nobackup  " no backup file
-set noswapfile  " no swap file
+set ar  " autoread
+set aw  " autowrite
+set nobk  " nobackup
+set noswf  " noswapfile
 set history=100  " history commands
 
 set nu  " number
