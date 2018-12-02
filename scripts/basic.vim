@@ -51,6 +51,9 @@ set listchars=tab:>-,trail:~
 " GUI
 """""""""""""""""""""""""""""""""""""""""""""""""
 set mouse-=a  " disable mouse
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
@@ -61,9 +64,9 @@ set background=dark
 set laststatus=2  " 0: noshow 1: >1show 2: always show
 "set statusline=\ %F%r%m%h%w\ [%{&ff}]\ \[%{&enc}]\ %y\ (%l,%c)\ %LL
 
-"hi StatusLine cterm=bold ctermbg=Cyan
+"hi StatusLine cterm=bold ctermbg=Yellow
 "au InsertEnter * hi StatusLine cterm=bold ctermbg=Green
-"au InsertLeave,WinEnter * hi StatusLine cterm=bold ctermbg=Cyan
+"au InsertLeave,WinEnter * hi StatusLine cterm=bold ctermbg=Yellow
 "au WinLeave * hi StatusLine cterm=bold ctermbg=White
 
 set cursorline

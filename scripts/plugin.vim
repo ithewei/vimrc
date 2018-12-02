@@ -36,6 +36,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.o$','\.pyc$']
 let NERDTreeWinPos='right'
+let NERDTreeNodeDelimiter='x'
 
 Plugin 'taglist.vim'
 set tags=tags;
