@@ -60,10 +60,17 @@ Plugin 'cscope.vim'
 "Plugin 'SuperTab'
 
 Plugin 'Valloric/YouCompleteMe'
+let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-let g:ycm_key_invoke_completion='<C-c>'
 let g:ycm_collect_identifiers_from_tags_file=1
+let g:ycm_complete_in_comments=1
+let g:ycm_complete_in_strings=1
+let g:ycm_error_symbol='x'
+let g:ycm_warning_symbol='!'
 set completeopt-=preview
+let g:ycm_key_invoke_completion='<C-d>'
+let g:ycm_key_list_stop_completion = ['<Enter>']
+nmap gt :YcmCompleter GoTo<CR>
 
 Plugin 'Markdown'
 

@@ -22,11 +22,9 @@ import ycm_core
 # compilation database set (by default, one is not set).
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
+'-g',
 '-Wall',
-'-Wextra',
-'-Werror',
-'-fexceptions',
-'-DNDEBUG',
+'-O3',
 # THIS IS IMPORTANT! Without a "-std=<something>" flag, clang won't know which
 # language to use when compiling headers. So it will guess. Badly. So C++
 # headers will be compiled as C headers. You don't want that so ALWAYS specify
@@ -43,11 +41,26 @@ flags = [
 '-isystem',
 '/usr/include',
 '-isystem',
+'/usr/include/c++/4.8',
+'-isystem',
+'/usr/include/c++/4.8/backward',
+'-isystem',
+'/usr/include/x86_64-linux-gnu',
+'-isystem',
+'/usr/include/x86_64-linux-gnu/c++/4.8',
+'-isystem',
 '/usr/local/include',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
+# proj INCPATH
+# '-isystem',
+# 'include',
+# '-isystem',
+# '3rd/include',
+# '-isystem',
+# 'src',
+# '-isystem',
+# 'src/hw',
+# '-isystem',
+# 'src/pb',
 ]
 
 
