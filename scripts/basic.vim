@@ -61,13 +61,13 @@ set guioptions-=r
 " colorscheme default
 set background=dark
 
-hi VertSplit term=reverse cterm=reverse ctermfg=DarkMagenta
+hi VertSplit term=reverse cterm=reverse ctermfg=DarkGray
 
 set laststatus=2  " 0: noshow 1: >1show 2: always show
 "set statusline=\ %F%r%m%h%w\ [%{&ff}]\ \[%{&enc}]\ %y\ (%l,%c)\ %LL
 
+hi StatusLineNC cterm=reverse ctermfg=DarkGray
 hi StatusLine cterm=bold,reverse ctermfg=Red
-hi StatusLineNC cterm=reverse ctermfg=DarkMagenta
 au InsertEnter * hi StatusLine ctermfg=Green
 au InsertLeave * hi StatusLine ctermfg=Red
 
