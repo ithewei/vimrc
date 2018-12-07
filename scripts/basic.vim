@@ -64,13 +64,15 @@ set background=dark
 set laststatus=2  " 0: noshow 1: >1show 2: always show
 "set statusline=\ %F%r%m%h%w\ [%{&ff}]\ \[%{&enc}]\ %y\ (%l,%c)\ %LL
 
-"hi StatusLine cterm=bold ctermbg=Yellow
-"au InsertEnter * hi StatusLine cterm=bold ctermbg=Green
-"au InsertLeave,WinEnter * hi StatusLine cterm=bold ctermbg=Yellow
-"au WinLeave * hi StatusLine cterm=bold ctermbg=White
+hi StatusLine cterm=bold,reverse
+au WinEnter,InsertLeave * hi StatusLine ctermfg=Yellow
+au WinLeave * hi StatusLine ctermfg=Black
+au InsertEnter * hi StatusLine ctermfg=Green
 
 set cursorline
 hi CursorLine cterm=none ctermbg=DarkGray
+au WinEnter * set cursorline
+au WinLeave * set nocursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " commands
