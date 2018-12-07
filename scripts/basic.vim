@@ -61,15 +61,18 @@ set guioptions-=r
 " colorscheme default
 set background=dark
 
+hi VertSplit term=reverse cterm=reverse ctermfg=DarkMagenta
+
 set laststatus=2  " 0: noshow 1: >1show 2: always show
 "set statusline=\ %F%r%m%h%w\ [%{&ff}]\ \[%{&enc}]\ %y\ (%l,%c)\ %LL
 
-hi StatusLine cterm=bold,reverse
-au WinEnter,InsertLeave * hi StatusLine ctermfg=Yellow
-au WinLeave * hi StatusLine ctermfg=Black
+hi StatusLine cterm=bold,reverse ctermfg=Red
+hi StatusLineNC cterm=reverse ctermfg=DarkMagenta
 au InsertEnter * hi StatusLine ctermfg=Green
+au InsertLeave * hi StatusLine ctermfg=Red
 
 set cursorline
+set nocursorcolumn
 hi CursorLine cterm=none ctermbg=DarkGray
 au WinEnter * set cursorline
 au WinLeave * set nocursorline
