@@ -31,7 +31,7 @@ Plugin 'VundleVim/Vundle.vim'
 "
 " All of your Plugins must be added before the following line
 
-Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline'
 
 Plugin 'scrooloose/nerdtree'
 let NERDTreeMinimalUI=1
