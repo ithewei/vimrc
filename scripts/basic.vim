@@ -157,3 +157,6 @@ map <C-b>7 <Esc>:b7<CR>
 map <C-b>8 <Esc>:b8<CR>
 map <C-b>9 <Esc>:b9<CR>
 
+" other
+nmap ; A;<Esc>
+
