@@ -51,16 +51,14 @@ flags = [
 '-isystem',
 '/usr/local/include',
 # proj INCPATH
-# '-isystem',
-# 'include',
-# '-isystem',
-# '3rd/include',
-# '-isystem',
-# 'src',
-# '-isystem',
-# 'src/hw',
-# '-isystem',
-# 'src/pb',
+'-isystem',
+'include',
+'-isystem',
+'3rd/include',
+'-isystem',
+'src',
+'-isystem',
+'src/hw',
 ]
 
 
