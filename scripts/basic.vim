@@ -13,7 +13,7 @@ filetype plugin indent on
 
 let $LANG='en'
 set enc=utf-8
-set ffs=unix,dos
+set ffs=unix,dos,mac
 
 set ar  " autoread
 set aw  " autowrite

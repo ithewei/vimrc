@@ -41,9 +41,22 @@ let NERDTreeWinPos='right'
 
 Plugin 'taglist.vim'
 set tags=tags;
-set autochdir
+"set autochdir
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
+
+Plugin 'cscope.vim'
+if has("cscope")
+    set cst " cscopetag
+    set csto=0
+    set nocsverb
+    if filereadable("cscope.out")
+        cs add cscope.out
+    elseif $CSCOPE_DB!=""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
+endif
 
 Plugin 'jlanzarotta/bufexplorer'
 
@@ -53,8 +66,6 @@ let g:winManagerWindowLayout="FileExplorer|BufExplorer"
 
 Plugin 'Auto-Pairs'
 Plugin 'scrooloose/nerdcommenter'
-
-Plugin 'cscope.vim'
 
 "Plugin 'Syntastic'
 "Plugin 'OmniCppComplete'
