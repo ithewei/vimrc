@@ -83,6 +83,7 @@ set completeopt-=preview
 let g:ycm_key_invoke_completion='<C-d>'
 let g:ycm_key_list_stop_completion = ['<Enter>']
 nmap gt :YcmCompleter GoTo<CR>
+Plugin 'rdnetto/YCM-Generator'
 
 Plugin 'Markdown'
 
