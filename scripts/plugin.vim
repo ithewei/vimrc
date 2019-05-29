@@ -56,6 +56,15 @@ if has("cscope")
         cs add $CSCOPE_DB
     endif
     set csverb
+    nmap <Leader>fa :cs find a <C-R><C-W><CR>
+    nmap <Leader>fc :cs find c <C-R><C-W><CR>
+    nmap <Leader>fd :cs find d <C-R><C-W><CR>
+    nmap <Leader>fe :cs find e <C-R><C-W><CR>
+    nmap <Leader>ff :cs find f <C-R><C-W><CR>
+    nmap <Leader>fg :cs find g <C-R><C-W><CR>
+    nmap <Leader>fi :cs find i <C-R><C-W><CR>
+    nmap <Leader>fs :cs find s <C-R><C-W><CR>
+    nmap <Leader>ft :cs find t <C-R><C-W><CR>
 endif
 
 Plugin 'jlanzarotta/bufexplorer'
