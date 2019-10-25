@@ -136,6 +136,8 @@ imap <C-g> <Esc>
 cmap <C-g> <Esc>
 vmap <C-g> <Esc>
 
+inoremap jj <Esc>
+
 " tabs navigate
 map <C-t>l <Esc>:tabNext<CR>
 map <C-t>h <Esc>:tabprevious<CR>
