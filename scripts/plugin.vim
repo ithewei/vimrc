@@ -36,7 +36,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.o$','\.pyc$']
+let NERDTreeIgnore=['\.o$','\.lo$','\.obj$','\.pyc$']
 let NERDTreeWinPos='right'
 
 Plugin 'taglist.vim'
