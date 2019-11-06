@@ -18,9 +18,9 @@ cd ProjectDir
 ~/.vim/cscopetag.sh
 ~/.vim/ycm.sh
 vim
-F2
-F3
+<F2>
+<F3>
 ```
 
 # ENJOY
-![vim.png](./vim.png)
+![vim.png](vim.png)
