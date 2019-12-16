@@ -38,6 +38,7 @@ let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.o$','\.lo$','\.obj$','\.pyc$']
 let NERDTreeWinPos='right'
+Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'taglist.vim'
 set tags=tags;
@@ -74,11 +75,6 @@ let g:winManagerWidth=30
 let g:winManagerWindowLayout="FileExplorer|BufExplorer"
 
 Plugin 'Auto-Pairs'
-Plugin 'scrooloose/nerdcommenter'
-
-"Plugin 'Syntastic'
-"Plugin 'OmniCppComplete'
-"Plugin 'SuperTab'
 
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_confirm_extra_conf=0
@@ -115,3 +111,4 @@ map <C-w><C-e> <Esc>:NERDTreeToggle<CR>
 map <F2> <Esc>:TlistToggle<CR>
 map <F3> <Esc>:NERDTreeToggle<CR>
 
+autocmd vimenter * NERDTree
