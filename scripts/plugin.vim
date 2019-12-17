@@ -8,8 +8,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 "
 " let Vundle manage Vundle, required
-" Plugin 'VundleVim/Vundle.vim'
-Plugin 'https://gitee.com/ithewei/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 "
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -34,24 +33,20 @@ Plugin 'https://gitee.com/ithewei/Vundle.vim'
 
 "Plugin 'vim-airline/vim-airline'
 
-" Plugin 'scrooloose/nerdtree'
-Plugin 'https://gitee.com/ithewei/nerdtree'
+Plugin 'scrooloose/nerdtree'
 let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.o$','\.lo$','\.obj$','\.pyc$']
 let NERDTreeWinPos='right'
-" Plugin 'scrooloose/nerdcommenter'
-Plugin 'https://gitee.com/ithewei/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
-" Plugin 'taglist.vim'
-Plugin 'https://gitee.com/ithewei/taglist.vim'
+Plugin 'taglist.vim'
 set tags=tags;
 "set autochdir
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
-" Plugin 'cscope.vim'
-Plugin 'https://gitee.com/ithewei/cscope.vim'
+Plugin 'cscope.vim'
 if has("cscope")
     set cst " cscopetag
     set csto=0
@@ -73,19 +68,15 @@ if has("cscope")
     nmap <Leader>ft :cs find t <C-R><C-W><CR>
 endif
 
-" Plugin 'jlanzarotta/bufexplorer'
-Plugin 'https://gitee.com/ithewei/bufexplorer'
+Plugin 'jlanzarotta/bufexplorer'
 
-" Plugin 'winmanager'
-Plugin 'https://gitee.com/ithewei/winmanager'
+Plugin 'winmanager'
 let g:winManagerWidth=30
 let g:winManagerWindowLayout="FileExplorer|BufExplorer"
 
-" Plugin 'Auto-Pairs'
-Plugin 'https://gitee.com/ithewei/Auto-Pairs'
+Plugin 'Auto-Pairs'
 
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'https://gitee.com/ithewei/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
@@ -98,11 +89,9 @@ set completeopt-=preview
 let g:ycm_key_invoke_completion='<C-d>'
 let g:ycm_key_list_stop_completion = ['<Enter>']
 nmap gt :YcmCompleter GoTo<CR>
-" Plugin 'rdnetto/YCM-Generator'
-Plugin 'https://gitee.com/ithewei/YCM-Generator'
+Plugin 'rdnetto/YCM-Generator'
 
-" Plugin 'Markdown'
-Plugin 'https://gitee.com/ithewei/Markdown'
+Plugin 'Markdown'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
