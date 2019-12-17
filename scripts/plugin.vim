@@ -86,6 +86,7 @@ Plugin 'https://gitee.com/ithewei/Auto-Pairs'
 
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'https://gitee.com/ithewei/YouCompleteMe'
+let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 let g:ycm_collect_identifiers_from_tags_file=1
@@ -122,4 +123,4 @@ map <C-w><C-e> <Esc>:NERDTreeToggle<CR>
 map <F2> <Esc>:TlistToggle<CR>
 map <F3> <Esc>:NERDTreeToggle<CR>
 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
