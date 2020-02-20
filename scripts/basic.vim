@@ -59,8 +59,9 @@ set guioptions-=r
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" colorscheme default
 set background=dark
+" let g:solarized_termcolors=256
+" colorscheme solarized
 
 hi VertSplit term=reverse cterm=reverse ctermfg=DarkGray
 
