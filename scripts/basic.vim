@@ -22,6 +22,7 @@ set noswf  " noswapfile
 set history=100  " history commands
 
 set nu  " number
+set relativenumber
 set ru  " ruler
 set sm  " showmatch
 set sc  " showcmd
@@ -136,8 +137,6 @@ imap <C-g> <Esc>
 cmap <C-g> <Esc>
 vmap <C-g> <Esc>
 
-inoremap jj <Esc>
-
 " tabs navigate
 map <C-t>l <Esc>:tabNext<CR>
 map <C-t>h <Esc>:tabprevious<CR>
@@ -160,5 +159,6 @@ map <C-b>8 <Esc>:b8<CR>
 map <C-b>9 <Esc>:b9<CR>
 
 " other
+inoremap jj <Esc>
 nmap ; A;<Esc>
 

@@ -40,8 +40,6 @@ let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.o$','\.lo$','\.obj$','\.pyc$']
 let NERDTreeWinPos='right'
-" Plugin 'scrooloose/nerdcommenter'
-Plugin 'https://gitee.com/ithewei/nerdcommenter'
 
 " Plugin 'taglist.vim'
 Plugin 'https://gitee.com/ithewei/taglist.vim'
@@ -81,9 +79,6 @@ Plugin 'https://gitee.com/ithewei/winmanager'
 let g:winManagerWidth=30
 let g:winManagerWindowLayout="FileExplorer|BufExplorer"
 
-" Plugin 'Auto-Pairs'
-Plugin 'https://gitee.com/ithewei/Auto-Pairs'
-
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'https://gitee.com/ithewei/YouCompleteMe'
 let g:ycm_server_python_interpreter='/usr/bin/python'
@@ -101,8 +96,13 @@ nmap gt :YcmCompleter GoTo<CR>
 " Plugin 'rdnetto/YCM-Generator'
 Plugin 'https://gitee.com/ithewei/YCM-Generator'
 
-" Plugin 'Markdown'
-Plugin 'https://gitee.com/ithewei/Markdown'
+" Plugin 'jiangmiao/auto-pairs'
+Plugin 'https://gitee.com/ithewei/auto-pairs'
+
+" Plugin 'tpope/vim-commentary'
+Plugin 'https://gitee.com/ithewei/vim-commentary'
+" Plugin 'tpope/vim-surround'
+Plugin 'https://gitee.com/ithewei/vim-surround'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
