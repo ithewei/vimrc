@@ -19,7 +19,7 @@ set ar  " autoread
 set aw  " autowrite
 set nobk  " nobackup
 set noswf  " noswapfile
-set history=100  " history commands
+set history=50  " history commands
 
 set nu  " number
 set relativenumber
@@ -27,7 +27,7 @@ set ru  " ruler
 set sm  " showmatch
 set sc  " showcmd
 set wildmenu  " wildmode
-set cmdheight=2
+set cmdheight=1
 
 set ic  " ignorecase
 set scs  " smartcase
