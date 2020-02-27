@@ -39,14 +39,15 @@ Plugin 'https://gitee.com/ithewei/nerdtree'
 let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.o$','\.lo$','\.obj$','\.pyc$']
-let NERDTreeWinPos='right'
+let NERDTreeWinSize=30
+let NERDTreeWinPos='left'
 
-" Plugin 'taglist.vim'
-Plugin 'https://gitee.com/ithewei/taglist.vim'
-set tags=tags;
-"set autochdir
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
+" Plugin 'kien/ctrlp.vim'
+Plugin 'https://gitee.com/ithewei/ctrlp.vim'
+
+" Plugin 'majutsushi/tagbar'
+Plugin 'https://gitee.com/ithewei/tagbar'
+let g:tagbar_width=30
 
 " Plugin 'cscope.vim'
 Plugin 'https://gitee.com/ithewei/cscope.vim'
@@ -71,14 +72,6 @@ if has("cscope")
     nmap <Leader>ft :cs find t <C-R><C-W><CR>
 endif
 
-" Plugin 'jlanzarotta/bufexplorer'
-Plugin 'https://gitee.com/ithewei/bufexplorer'
-
-" Plugin 'winmanager'
-Plugin 'https://gitee.com/ithewei/winmanager'
-let g:winManagerWidth=30
-let g:winManagerWindowLayout="FileExplorer|BufExplorer"
-
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'https://gitee.com/ithewei/YouCompleteMe'
 let g:ycm_server_python_interpreter='/usr/bin/python'
@@ -101,6 +94,8 @@ Plugin 'https://gitee.com/ithewei/auto-pairs'
 
 " Plugin 'tpope/vim-commentary'
 Plugin 'https://gitee.com/ithewei/vim-commentary'
+autocmd FileType c,cpp,java set commentstring=//\ %s
+
 " Plugin 'tpope/vim-surround'
 Plugin 'https://gitee.com/ithewei/vim-surround'
 
@@ -116,11 +111,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-map <C-w><C-b> <Esc>:WMToggle<CR>
-map <C-w><C-t> <Esc>:TlistToggle<CR>
 map <C-w><C-e> <Esc>:NERDTreeToggle<CR>
+map <C-w><C-t> <Esc>:TagbarToggle<CR>
 
-map <F2> <Esc>:TlistToggle<CR>
-map <F3> <Esc>:NERDTreeToggle<CR>
-
-" autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree
+autocmd BufReadPost *.h,*.c,*.hpp,*.cc,*.cpp,*.cxx,*.py call tagbar#autoopen()

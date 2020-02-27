@@ -2,6 +2,16 @@
 
 ithewei's .vimrc
 
+plugins:
+- nerdtree
+- tagbar
+- ctrlp
+- cscope
+- YCM
+- auto-pairs
+- vim-commentary
+- vim-surround
+
 # INSTALL
 ```
 git clone https://github.com/ithewei/vimrc.git ~/.vim
@@ -18,8 +28,6 @@ cd ProjectDir
 ~/.vim/cscopetag.sh
 ~/.vim/ycm.sh
 vim
-<F2>
-<F3>
 ```
 
 # ENJOY
