@@ -79,6 +79,9 @@ hi CursorLine cterm=none ctermbg=DarkGray
 au WinEnter * set cursorline
 au WinLeave * set nocursorline
 
+hi PMenu cterm=none ctermbg=DarkGray ctermfg=white
+hi PMenuSel cterm=none ctermbg=yellow ctermfg=black
+
 """""""""""""""""""""""""""""""""""""""""""""""
 " commands
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -99,7 +102,7 @@ let mapleader = ","
 inoremap { {<CR>}<Esc>O
 inoremap [ []<Esc>i
 inoremap ( ()<Esc>i
-inoremap < <><Esc>i
+" inoremap < <><Esc>i
 inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ` ``<Esc>i

@@ -75,19 +75,28 @@ endif
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'https://gitee.com/ithewei/YouCompleteMe'
 let g:ycm_server_python_interpreter='/usr/bin/python'
-let g:ycm_confirm_extra_conf=0
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_file=1
 let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_error_symbol='x'
 let g:ycm_warning_symbol='!'
-set completeopt-=preview
+set completeopt=menu
+let g:ycm_add_preview_to_completeopt=0
 let g:ycm_key_invoke_completion='<C-d>'
 let g:ycm_key_list_stop_completion = ['<Enter>']
+let g:ycm_min_num_identifier_candidate_chars=3
+let g:ycm_semantic_triggers={'c,cpp,python,java,go,erlang,perl,cs,lua,javascript' : ['re!\w{3}']}
 nmap gt :YcmCompleter GoTo<CR>
 " Plugin 'rdnetto/YCM-Generator'
 Plugin 'https://gitee.com/ithewei/YCM-Generator'
+
+" Plugin 'Shougo/echodoc.vim'
+Plugin 'https://gitee.com/ithewei/echodoc.vim'
+set noshowmode
+let g:echodoc_enable_at_startup=1
+let g:echodoc#type='echo'
 
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'https://gitee.com/ithewei/auto-pairs'
