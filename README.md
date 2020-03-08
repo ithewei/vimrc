@@ -6,11 +6,11 @@ plugins:
 - nerdtree
 - tagbar
 - ctrlp
-- cscope
 - YCM
 - auto-pairs
 - vim-commentary
 - vim-surround
+- vim-fugitive
 
 # INSTALL
 ```

@@ -49,8 +49,6 @@ Plugin 'https://gitee.com/ithewei/ctrlp.vim'
 Plugin 'https://gitee.com/ithewei/tagbar'
 let g:tagbar_width=30
 
-" Plugin 'cscope.vim'
-Plugin 'https://gitee.com/ithewei/cscope.vim'
 if has("cscope")
     set cst " cscopetag
     set csto=0
@@ -108,6 +106,9 @@ autocmd FileType c,cpp,java set commentstring=//\ %s
 " Plugin 'tpope/vim-surround'
 Plugin 'https://gitee.com/ithewei/vim-surround'
 
+" Plugin 'tpope/vim-fugitive'
+Plugin 'https://gitee.com/ithewei/vim-fugitive'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " Brief help
@@ -123,5 +124,5 @@ filetype plugin indent on    " required
 map <C-w><C-e> <Esc>:NERDTreeToggle<CR>
 map <C-w><C-t> <Esc>:TagbarToggle<CR>
 
-autocmd vimenter * NERDTree
+autocmd VimEnter * NERDTree
 autocmd BufReadPost *.h,*.c,*.hpp,*.cc,*.cpp,*.cxx,*.py call tagbar#autoopen()
